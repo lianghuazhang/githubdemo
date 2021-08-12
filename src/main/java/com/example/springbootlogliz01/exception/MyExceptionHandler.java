@@ -14,6 +14,7 @@ public class MyExceptionHandler {
 
             int a =1;
             int b =1;
+            int d = 5;
         } finally {
 
         }
