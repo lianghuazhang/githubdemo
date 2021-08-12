@@ -11,6 +11,8 @@ public class MyExceptionHandler {
     public String handleException(){
         try {
             System.out.println("");
+            int a =1;
+
         } finally {
 
         }
