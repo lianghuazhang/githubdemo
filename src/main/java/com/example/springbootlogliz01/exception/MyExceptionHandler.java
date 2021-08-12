@@ -11,8 +11,9 @@ public class MyExceptionHandler {
     public String handleException(){
         try {
             System.out.println("");
-            int a =1;
 
+            int a =1;
+            int b =1;
         } finally {
 
         }
