@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class MyExceptionHandler {
 
-    @ExceptionHandler()
     public String handleException(){
         try {
             System.out.println("");
