@@ -24,11 +24,11 @@ class SpringBootLogLiz01ApplicationTests {
         log.info("自定义信息");
         log.warn("警告信息");
         log.error("异常信息");
-        User user = new User();
-        user.setAge(18);
-        user.setName("liz");
-        user.setSex("男");
-        userService.add(user);
+//        User user = new User();
+//        user.setAge(18);
+//        user.setName("liz");
+//        user.setSex("男");
+//        userService.add(user);
 }
 
 }

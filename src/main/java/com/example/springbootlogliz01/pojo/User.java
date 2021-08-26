@@ -32,6 +32,12 @@ public class User {
         this.sex = sex;
     }
 
+    public User(String name,Integer age,String sex){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+
     @Override
     public String toString() {
         return "User{" +

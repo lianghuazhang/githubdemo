@@ -1,243 +1,84 @@
-2021-08-10 12:10:31.176  INFO 15444 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : Starting SpringBootLogLiz01ApplicationTests using Java 1.8.0_231 on lianghuazhang with PID 15444 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
-2021-08-10 12:10:31.182 DEBUG 15444 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-10 12:10:31.184  INFO 15444 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : No active profile set, falling back to default profiles: default
-2021-08-10 12:10:32.586  WARN 15444 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-2021-08-10 12:10:32.593  INFO 15444 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-08-10 12:10:32.621 ERROR 15444 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) [spring-boot-test-2.5.3.jar:2.5.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) [spring-test-5.3.9.jar:5.3.9]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_231]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_231]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_231]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_231]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_231]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_231]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_231]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_231]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58) ~[junit-rt.jar:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.9.jar:5.3.9]
-	... 85 common frames omitted
-Caused by: java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:100) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:77) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:291) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:268) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1090) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1032) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_231]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.9.jar:5.3.9]
-	... 86 common frames omitted
-
-2021-08-10 12:10:32.628 ERROR 15444 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@4b0d79fc] to prepare test instance [com.example.springbootlogliz01.SpringBootLogLiz01ApplicationTests@27d57a2c]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) [spring-test-5.3.9.jar:5.3.9]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_231]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_231]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_231]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:1.8.0_231]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_231]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_231]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[na:1.8.0_231]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_231]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) [junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_231]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_231]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58) ~[junit-rt.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.5.3.jar:2.5.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.9.jar:5.3.9]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.9.jar:5.3.9]
-	... 67 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.9.jar:5.3.9]
-	... 85 common frames omitted
-Caused by: java.lang.IllegalStateException: No exception types mapped to public java.lang.String com.example.springbootlogliz01.exception.MyExceptionHandler.handleException()
-	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:100) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:77) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:291) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:268) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1090) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1032) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_231]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.9.jar:5.3.9]
-	... 86 common frames omitted
-
-2021-08-10 12:11:00.791  INFO 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : Starting SpringBootLogLiz01ApplicationTests using Java 1.8.0_231 on lianghuazhang with PID 7284 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
-2021-08-10 12:11:00.792 DEBUG 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-10 12:11:00.794  INFO 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : No active profile set, falling back to default profiles: default
-2021-08-10 12:11:02.110  INFO 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : Started SpringBootLogLiz01ApplicationTests in 1.625 seconds (JVM running for 2.6)
-2021-08-10 12:11:02.440 TRACE 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : trace 日志
-2021-08-10 12:11:02.441 DEBUG 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : 调试信息
-2021-08-10 12:11:02.441  INFO 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : 自定义信息
-2021-08-10 12:11:02.441  WARN 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : 警告信息
-2021-08-10 12:11:02.441 ERROR 7284 --- [main] c.e.s.SpringBootLogLiz01ApplicationTests : 异常信息
-2021-08-10 12:12:05.069  INFO 11376 --- [main] c.e.s.SpringBootLogLiz01Application      : Starting SpringBootLogLiz01Application using Java 1.8.0_231 on lianghuazhang with PID 11376 (C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
-2021-08-10 12:12:05.072 DEBUG 11376 --- [main] c.e.s.SpringBootLogLiz01Application      : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-10 12:12:05.072  INFO 11376 --- [main] c.e.s.SpringBootLogLiz01Application      : No active profile set, falling back to default profiles: default
-2021-08-10 12:12:05.778  INFO 11376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-10 12:12:05.786  INFO 11376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-10 12:12:05.786  INFO 11376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-08-10 12:12:05.855  INFO 11376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-10 12:12:05.855  INFO 11376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
-2021-08-10 12:12:06.096  INFO 11376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-10 12:12:06.103  INFO 11376 --- [main] c.e.s.SpringBootLogLiz01Application      : Started SpringBootLogLiz01Application in 1.334 seconds (JVM running for 1.877)
+2021-08-16 17:54:51.297  INFO 3564 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 3564 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 17:54:51.304 DEBUG 3564 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 17:54:51.305  INFO 3564 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 17:54:53.805  INFO 3564 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.906 seconds (JVM running for 4.316)
+2021-08-16 17:55:06.732  INFO 12016 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 12016 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 17:55:06.734 DEBUG 12016 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 17:55:06.736  INFO 12016 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 17:55:08.871  INFO 12016 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.539 seconds (JVM running for 3.653)
+2021-08-16 17:57:27.860  INFO 11776 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 11776 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 17:57:27.862 DEBUG 11776 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 17:57:27.863  INFO 11776 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 17:57:30.063  INFO 11776 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.559 seconds (JVM running for 3.633)
+2021-08-16 18:00:42.557  INFO 11204 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 11204 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 18:00:42.558 DEBUG 11204 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 18:00:42.558  INFO 11204 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 18:00:44.628  INFO 11204 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.416 seconds (JVM running for 3.453)
+2021-08-16 18:09:22.226  INFO 21984 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 21984 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 18:09:22.227 DEBUG 21984 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 18:09:22.229  INFO 21984 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 18:09:24.290  INFO 21984 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.419 seconds (JVM running for 3.559)
+2021-08-16 18:11:03.984  INFO 4428 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 4428 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 18:11:03.985 DEBUG 4428 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 18:11:03.987  INFO 4428 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 18:11:06.047  INFO 4428 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.404 seconds (JVM running for 3.467)
+2021-08-16 19:01:11.105  INFO 13936 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 13936 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 19:01:11.107 DEBUG 13936 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 19:01:11.108  INFO 13936 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 19:01:13.324  INFO 13936 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.58 seconds (JVM running for 3.654)
+2021-08-16 19:18:46.249  INFO 9288 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 9288 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 19:18:46.251 DEBUG 9288 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 19:18:46.252  INFO 9288 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 19:18:48.347  INFO 9288 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.448 seconds (JVM running for 3.568)
+2021-08-16 21:40:31.831  INFO 5056 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 5056 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 21:40:31.832 DEBUG 5056 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 21:40:31.833  INFO 5056 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 21:40:34.217  INFO 5056 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.815 seconds (JVM running for 3.914)
+2021-08-16 21:41:07.458  INFO 4944 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 4944 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 21:41:07.460 DEBUG 4944 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 21:41:07.462  INFO 4944 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 21:41:09.963  INFO 4944 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 3.015 seconds (JVM running for 4.156)
+2021-08-16 21:56:10.218  INFO 14848 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 14848 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 21:56:10.219 DEBUG 14848 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 21:56:10.221  INFO 14848 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 21:56:12.674  INFO 14848 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.857 seconds (JVM running for 4.22)
+2021-08-16 21:56:32.448  INFO 3000 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 3000 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 21:56:32.449 DEBUG 3000 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 21:56:32.450  INFO 3000 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 21:56:34.724  INFO 3000 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.631 seconds (JVM running for 3.755)
+2021-08-16 21:57:06.952  INFO 3452 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 3452 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 21:57:06.954 DEBUG 3452 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 21:57:06.955  INFO 3452 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 21:57:09.365  INFO 3452 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.768 seconds (JVM running for 3.928)
+2021-08-16 22:02:50.854  INFO 16256 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 16256 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:02:50.855 DEBUG 16256 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:02:50.857  INFO 16256 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:02:53.182  INFO 16256 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.715 seconds (JVM running for 3.896)
+2021-08-16 22:03:00.457  INFO 1676 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 1676 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:03:00.458 DEBUG 1676 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:03:00.460  INFO 1676 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:03:02.804  INFO 1676 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.699 seconds (JVM running for 3.81)
+2021-08-16 22:03:16.585  INFO 18444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 18444 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:03:16.586 DEBUG 18444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:03:16.587  INFO 18444 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:03:18.778  INFO 18444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.635 seconds (JVM running for 3.782)
+2021-08-16 22:03:24.871  INFO 12868 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 12868 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:03:24.872 DEBUG 12868 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:03:24.873  INFO 12868 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:03:27.177  INFO 12868 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.828 seconds (JVM running for 4.252)
+2021-08-16 22:03:32.247  INFO 13444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 13444 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:03:32.248 DEBUG 13444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:03:32.250  INFO 13444 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:03:35.010  INFO 13444 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 3.282 seconds (JVM running for 4.834)
+2021-08-16 22:04:01.759  INFO 8892 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 8892 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:04:01.760 DEBUG 8892 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:04:01.763  INFO 8892 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:04:04.141  INFO 8892 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.768 seconds (JVM running for 3.953)
+2021-08-16 22:10:37.468  INFO 4804 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 4804 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:10:37.470 DEBUG 4804 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:10:37.471  INFO 4804 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:10:39.713  INFO 4804 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.585 seconds (JVM running for 3.699)
+2021-08-16 22:13:06.912  INFO 12020 --- [main] c.example.springbootlogliz01.LambdaDemo  : Starting LambdaDemo using Java 1.8.0_231 on lianghuazhang with PID 12020 (started by Administrator in C:\Users\Administrator\IdeaProjects\spring-boot-log-liz-01)
+2021-08-16 22:13:06.915 DEBUG 12020 --- [main] c.example.springbootlogliz01.LambdaDemo  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-16 22:13:06.918  INFO 12020 --- [main] c.example.springbootlogliz01.LambdaDemo  : No active profile set, falling back to default profiles: default
+2021-08-16 22:13:09.133  INFO 12020 --- [main] c.example.springbootlogliz01.LambdaDemo  : Started LambdaDemo in 2.62 seconds (JVM running for 3.718)
